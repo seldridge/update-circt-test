@@ -1,0 +1,15 @@
+name: 'CD (firtool)'
+
+on:
+  workflow_dispatch:
+
+jobs:
+  cd-circt:
+    name: 'Check Version, Create PR'
+    runs-on: ubuntu-22.04
+    steps:
+      - name: 'circt/update-circt'
+        uses: circt/update-circt@v1.0.0
+        with:
+          user: chiselbot
+          email: chiselbot@users.noreply.github.com
